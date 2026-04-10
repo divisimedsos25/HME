@@ -1,0 +1,29 @@
+/* style.css */
+
+/* 1. State Awal: Elemen tersembunyi dan agak turun ke bawah */
+.reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.17, 0.55, 0.55, 1);
+}
+
+/* 2. State Aktif: Elemen muncul dan kembali ke posisi normal */
+.reveal-on-scroll.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Tambahan Efek Hover untuk kartu agar lebih hidup */
+#proker .grid div, #struktur .flex div, #struktur .grid div {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#proker .grid div:hover, #struktur .flex div:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px -5px rgba(255, 102, 0, 0.3);
+}
+
+/* Smooth Scroll untuk navigasi */
+html {
+    scroll-behavior: smooth;
+}
